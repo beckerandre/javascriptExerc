@@ -1,0 +1,40 @@
+body{        
+  padding-top: 60px;
+  padding-bottom: 40px;
+  margin: auto;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+.fixed-header, .fixed-footer{
+  width: 100%;
+  position: fixed;        
+  background: #333;
+  padding: 10px 0;
+  color: #fff;
+}
+.fixed-header{
+  top: 0;
+}
+.fixed-header a{
+  text-decoration: none;
+  color: #fff;
+}
+.fixed-footer{
+  bottom: 0;
+}
+.container hr{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.language{
+  float: right;
+}
+
+.language img{
+  max-width: 20px;
+  float: right;
+  margin-left: 10px;
+}
