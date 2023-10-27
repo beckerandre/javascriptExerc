@@ -1,18 +1,19 @@
 import * as exercise from './exercises.js';
 
-//pegar todos os button do index e identifica qual foi clicado e envia para exercises.js
 document.addEventListener("DOMContentLoaded", function () {
-    // pega todos os btn com class de nome excButtons
+    // Seleciona todos os botões com a classe "botoes-iguais"
     var buttons = document.querySelectorAll(".excButtons");
 
-    // funcao quando pega um dos btn clicados
+    // Função para chamar quando um botão é clicado
     function callJSExc(event) {
-        var btnClicked = event.target.textContent; //Pega o texto do btn
-        btnClicked = btnClicked.charAt(btnClicked.length - 1); // Pega o numero que esta no texto do btn
+        //console.log("clicked")
+        var btnClicked = event.target.textContent; //get text of button
+        btnClicked = btnClicked.charAt(btnClicked.length - 1); //get the number of button
+        //alert("Botão " + btnClicked + " foi clicado!");
         exercise.callExc(btnClicked);
     }
 
-    // Adiciona o event em todos os btn
+    // Adiciona o evento onclick a todos os botões
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", callJSExc);
     }
