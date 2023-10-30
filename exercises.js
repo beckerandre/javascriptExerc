@@ -42,21 +42,27 @@ var exercise1 = function(number){
     var age
     var name
     alert("Bem vindo! A seguir pediremos que informe alguns dados")
-
+    
     //solicita nome ate ter um nome e valida
     do{
         name = ""
         name = prompt("Digite o seu nome")
     }while(!validationName(name))
-
-    //solicita idade ate ter uma idade e valida
+    
+    //solicita idade ate ter uma idade valida
     do{
         age = 0
         age = parseInt(prompt("Digite a sua idade"))
     }while(!validationAge(age))
-
+    
     //confirmacao da idade
-    var confirmAge = confirm("Confirme sua idade. "+age+" anos?")
+    if( age > 1 ){
+        var confirmAge = confirm("Confirme sua idade. "+age+" anos?")
+        age = age + " anos"
+    }else if( age == 1 ){
+        var confirmAge = confirm("Confirme sua idade. "+age+" ano?")
+        age = age + " ano"
+    }
     if (confirmAge == true){
         confirmAge = "Confirmado"
     }else{
