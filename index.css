@@ -59,3 +59,11 @@ body{
   max-width: 20px;
   margin-left: 20px;
 }
+.container li{
+  list-style-type: none;
+  text-indent: -15px;
+}
+.container li:before{
+  content: "-";
+  margin-right: 7px;
+}
