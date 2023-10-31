@@ -9,6 +9,9 @@ export function callExc(number){
         case 2:
         exercise2(number);
         break;
+        case 3:
+        exercise3(number);
+        break;
         default:
         console.log("error")
     }
@@ -119,4 +122,29 @@ var exercise2 = function(number){
     else if (differenceAge<0){
         alert("Idades foram inseridas erradas. Pessoa mais nova não é a mais nova") //foi inserido idade errada para cada um (sobre mais velho e mais novo)
     }
+}
+
+var exercise3 = function(number){
+    let name
+    let velocity = 0
+    let confirmation
+    let verifyVelocity
+    
+    do{
+        name = ""
+        name = prompt("Digite o nome piloto.")
+    }while(!validationName(name))
+    
+    do{
+        verifyVelocity = 0
+        verifyVelocity = parseFloat(prompt("A nave está a "+velocity+" km/h.\n\nDigite um valor de velocidade para mover a nave.\nPara finalizar o programa digite 0 para parar a nave."))
+        if(verifyVelocity != NaN && verifyVelocity > 0){
+            confirmation = confirm("Confirma alteração da velocidade para "+verifyVelocity+" km/h?")
+            confirmation ? velocity=verifyVelocity : alert("Confirmação de velocidade negada. Mantendo velocidade a "+velocity+" km/h")
+        }
+        else if(verifyVelocity == 0){
+            alert("Nave parada. Navegação sendo finalizada")
+        }
+    }while(verifyVelocity != 0)
+    
 }
