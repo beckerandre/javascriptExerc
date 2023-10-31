@@ -12,8 +12,14 @@ export function callExc(number){
         case 3:
         exercise3(number);
         break;
+        case 4:
+        exercise4(number);
+        break;
+        case 5:
+        exercise5(number);
+        break;
         default:
-        console.log("error")
+        console.log("btn error")
     }
 }
 
@@ -147,4 +153,49 @@ var exercise3 = function(number){
         }
     }while(verifyVelocity != 0)
     
+}
+
+var exercise4 = function(number){
+    let distance
+    do{
+        distance = 0
+        distance = parseFloat(prompt("Favor digitar a distância em anos luz que deseja converter a medida."))
+        if(isNaN(distance)){
+            alert("Digite um número válido")
+        }
+    }while(isNaN(distance))
+
+    let option = parseInt(prompt("Digite a opção para ser feita a conversão do valor:\n1 - Parsec (pc)\n2 - Unidade Astronômica\n3 - Quilometros"))
+    switch(option){
+        case 1:
+        alert("Valor em anos luz: "+distance+"\nDistância calculada para Parsec: "+(distance * 0.306601)+" pc")
+        break;
+        case 2:
+        alert("Valor em anos luz: "+distance+"\nDistância calculada para Unidade Astronômica: "+(distance * 63241.1)+" ua")
+        break;
+        case 3:
+        alert("Valor em anos luz: "+distance+"\nDistância calculada para Quilometros: "+(distance * 9.5 * Math.pow(10, 12)).toExponential()+" km")
+        break;
+        default:
+            alert("Opção inválida.")
+    }
+}
+
+var exercise5 = function(number){
+    let shipName = prompt("Qual o nome da sua nave?")
+    let option
+    let warpTimes = 0
+
+    do{
+        option = parseInt(prompt("Deseja realizar a próxima dobra?\n(digite o número da opção)\n1 - Sim\n2 - Não"))
+        if(isNaN(option) || option >2 || option < 1){
+            alert("Digite 1 ou 2")
+        }else if(option == 1){
+            alert("Fazendo uma dobra")
+            warpTimes += 1
+        }
+
+    }while(option != 2 )
+
+    alert("A sua nave "+shipName+" fez "+warpTimes+" dobras espaciais.")
 }
