@@ -18,6 +18,12 @@ export function callExc(number){
         case 5:
         exercise5(number);
         break;
+        case 6:
+        exercise6(number);
+        break;
+        case 7:
+        exercise7(number);
+        break;
         default:
         console.log("btn error")
     }
@@ -198,4 +204,32 @@ var exercise5 = function(number){
     }while(option != 2 )
 
     alert("A sua nave "+shipName+" fez "+warpTimes+" dobras espaciais.")
+}
+
+var exercise6 = function(number){
+    let shipName = prompt("Qual o nome da nave que deseja ocultar?")
+    let charToReplace = prompt("Qual caractere deseja alterar?")
+    let charReplacement = prompt("Para qual caractere deseja alterar?")
+    let newName = ""
+
+    for(let i=0; i<shipName.length; i++){
+        shipName[i] == charToReplace ? newName += charReplacement : newName += shipName[i]
+    }
+
+    shipName == newName ? alert("Caractere não alterado. Nome não alterado") : alert("Novo nome da Nave: "+newName)
+}
+
+var exercise7 = function(number){
+    let shipName = prompt("Qual o nome da nave?")
+    let invertedName = ""
+
+    for(let i = shipName.length - 1; i >= 0; i--){
+        if(shipName[i] == "e"){
+            break
+        }
+        invertedName += shipName[i]
+        console.log(invertedName);
+    }
+    
+    alert("Nome original da nave: "+shipName+"\nNome ocultado: "+invertedName)
 }
