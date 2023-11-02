@@ -4,25 +4,25 @@ export function callExc(number){
     
     switch (number){
         case 1:
-        exercise1(number);
+        exercise1();
         break;
         case 2:
-        exercise2(number);
+        exercise2();
         break;
         case 3:
-        exercise3(number);
+        exercise3();
         break;
         case 4:
-        exercise4(number);
+        exercise4();
         break;
         case 5:
-        exercise5(number);
+        exercise5();
         break;
         case 6:
-        exercise6(number);
+        exercise6();
         break;
         case 7:
-        exercise7(number);
+        exercise7();
         break;
         default:
         console.log("btn error")
@@ -33,7 +33,7 @@ export function callExc(number){
 var validationAge = function(age){
     if(Number.isNaN(age)){
         return false;
-    }if((parseInt(age)<=0 || parseInt(age) > 150)){
+    }if((parseInt(age) <= 0 || parseInt(age) > 150)){
         return false;
     }else{
         return true;
@@ -56,7 +56,7 @@ var validationName = function(name){
 }
 
 
-var exercise1 = function(number){
+var exercise1 = function(){
     var age
     var name
     alert("Bem vindo! A seguir pediremos que informe alguns dados")
@@ -90,7 +90,7 @@ var exercise1 = function(number){
 }
 
 
-var exercise2 = function(number){
+var exercise2 = function(){
     var oldestName
     var oldestAge
     var youngestName
@@ -136,17 +136,19 @@ var exercise2 = function(number){
     }
 }
 
-var exercise3 = function(number){
+var exercise3 = function(){
     let name
     let velocity = 0
     let confirmation
     let verifyVelocity
     
+    // solicita o nome ate ter um nome valido
     do{
         name = ""
         name = prompt("Digite o nome piloto.")
     }while(!validationName(name))
     
+    //solicita a velocidade e encerra ao digitar 0 (zero). valida se é numero digitado.
     do{
         verifyVelocity = 0
         verifyVelocity = parseFloat(prompt("A nave está a "+velocity+" km/h.\n\nDigite um valor de velocidade para mover a nave.\nPara finalizar o programa digite 0 para parar a nave."))
@@ -161,8 +163,10 @@ var exercise3 = function(number){
     
 }
 
-var exercise4 = function(number){
+var exercise4 = function(){
     let distance
+    
+    // digitar ate ser numero valido.
     do{
         distance = 0
         distance = parseFloat(prompt("Favor digitar a distância em anos luz que deseja converter a medida."))
@@ -170,7 +174,8 @@ var exercise4 = function(number){
             alert("Digite um número válido")
         }
     }while(isNaN(distance))
-
+    
+    // opcoes para escolher para converter
     let option = parseInt(prompt("Digite a opção para ser feita a conversão do valor:\n1 - Parsec (pc)\n2 - Unidade Astronômica\n3 - Quilometros"))
     switch(option){
         case 1:
@@ -183,15 +188,16 @@ var exercise4 = function(number){
         alert("Valor em anos luz: "+distance+"\nDistância calculada para Quilometros: "+(distance * 9.5 * Math.pow(10, 12)).toExponential()+" km")
         break;
         default:
-            alert("Opção inválida.")
+        alert("Opção inválida.")
     }
 }
 
-var exercise5 = function(number){
-    let shipName = prompt("Qual o nome da sua nave?")
+var exercise5 = function(){
+    let shipName = prompt("Qual o nome da sua nave?") //solicita o nome da nave
     let option
     let warpTimes = 0
-
+    
+    // while ate digitar 2 para parar. contando o numero de vezes para fazer a dobra
     do{
         option = parseInt(prompt("Deseja realizar a próxima dobra?\n(digite o número da opção)\n1 - Sim\n2 - Não"))
         if(isNaN(option) || option >2 || option < 1){
@@ -200,29 +206,31 @@ var exercise5 = function(number){
             alert("Fazendo uma dobra")
             warpTimes += 1
         }
-
+        
     }while(option != 2 )
-
+    
     alert("A sua nave "+shipName+" fez "+warpTimes+" dobras espaciais.")
 }
 
-var exercise6 = function(number){
+var exercise6 = function(){
     let shipName = prompt("Qual o nome da nave que deseja ocultar?")
     let charToReplace = prompt("Qual caractere deseja alterar?")
     let charReplacement = prompt("Para qual caractere deseja alterar?")
     let newName = ""
-
+    
+    //for para fazer o replace da letra solicitada
     for(let i=0; i<shipName.length; i++){
         shipName[i] == charToReplace ? newName += charReplacement : newName += shipName[i]
     }
-
+    // mensagem do nome alterado. caso ficou igual alerta tambem.
     shipName == newName ? alert("Caractere não alterado. Nome não alterado") : alert("Novo nome da Nave: "+newName)
 }
 
-var exercise7 = function(number){
+var exercise7 = function(){
     let shipName = prompt("Qual o nome da nave?")
     let invertedName = ""
-
+    
+    // for pra apresentar a palavra ao contrario e para caso encontrar a letra 'e'
     for(let i = shipName.length - 1; i >= 0; i--){
         if(shipName[i] == "e"){
             break
