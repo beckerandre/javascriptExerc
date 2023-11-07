@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,8 @@
   <link rel="stylesheet" href="index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+    rel="stylesheet">
 </head>
 <header>
   <div class="fixed-header">
@@ -23,6 +25,7 @@
     </div>
   </div>
 </header>
+
 <body>
   <div class="container">
     <h3>Exercício 1</h3>
@@ -33,20 +36,18 @@
       <li> Peça que o usuário informe sua idade</li>
       <li> Peça que ele confirme a idade</li>
     </ul>
-    <p>Exiba um alerta:<br>
-      <div class="tabulation boxCitation">
-        <i>
-          "O nome do usuário digitado<br>
-          Idade digitada <br>
-          A confirmação da idade"
-        </i>
-      </div>
+    <p>Exiba um alerta:<br><br>
+      <i class="tabulation boxCitation">
+        "O nome do usuário digitado<br>
+        Idade digitada <br>
+        A confirmação da idade"
+      </i>
     </p>
-    
+
     <button class="excButtons">Exercício 1</button>
     <hr>
   </div>
-  
+
   <div class="container">
     <h3>Exercício 2</h3>
     <p>Solicitar ao usuário o nome da pessoa mais velha. <br>
@@ -58,11 +59,11 @@
       Exibir o nome da pessoa mais nova e sua idade. <br>
       Exibir a diferença de idade.
     </p>
-    
+
     <button class="excButtons">Exercício 2</button>
     <hr>
   </div>
-  
+
   <div class="container">
     <h3>Exercício 3</h3>
     <p>Simular o sistema de navegação de uma nave interagindo com o usuário. <br>
@@ -74,21 +75,21 @@
       <li>Perguntar a que velocidade ele gostaria de acelerar a nave.</li>
       <li>Pedir uma confirmação informando que está indo para a velocidade X km/h.</li>
     </ul>
-    
+
     <button class="excButtons">Exercício 3</button>
     <hr>
   </div>
-  
+
   <div class="container">
     <h3>Exercício 4</h3>
     <p>Exiba um alerta solicitando a distância em anos-luz, e a distância convertida para a operação desejada. <br>
       Converter anos luz para Parsec, Unidade Astronômica ou Quilômetros.
     </p>
-    
+
     <button class="excButtons">Exercício 4</button>
     <hr>
   </div>
-  
+
   <div class="container">
     <h3>Exercício 5</h3>
     <p>O usuário deve ser perguntado se deseja realizar a próxima dobra espacial da sua nave.</p>
@@ -101,11 +102,11 @@
       Ao escolher não em qualquer pergunta, a contagem deve ser encerrada. <br>
       O programa deve informar o nome da nave e o numero de vezes seguidos que a dobra espacial foi realizado.
     </p>
-    
+
     <button class="excButtons">Exercício 5</button>
     <hr>
   </div>
-  
+
   <div class="container">
     <h3>Exercício 6</h3>
     <p>Esse exercício irá ocultar o nome da nave. <br>
@@ -123,45 +124,82 @@
     </ul>
     <p class="boxCitation"><i>O novo nome da nave é &lt;nome da nave&gt;.</i>
     </p><br>
-    
+
     <button class="excButtons">Exercício 6</button>
     <hr>
   </div>
-  
+
   <div class="container">
     <h3>Exercício 7</h3>
-    <p>Neste exercício vamos fazer novamente um código que oculte o nome da nave, mas desta vez invertendo, e que seja sensível a letra 'e' <br>
+    <p>Neste exercício vamos fazer novamente um código que oculte o nome da nave, mas desta vez invertendo, e que seja
+      sensível a letra 'e' <br>
       Para este problema, precisamos:
     </p>
     <ul>
       <li>Solicitar o nome da nave.</li>
       <li>Utilizar uma estrutura de repetição para inverter o nome da nave <br>
-        <i>Esta estrutura deverá percorrer a nave do último caractere até o primeiro.</i></li>
+        <i>Esta estrutura deverá percorrer a nave do último caractere até o primeiro.</i>
+      </li>
       <li>Durante a inversão, procurar pelo caractere proibido 'e'.</li>
       <li>Caso encontre, a inversão deve ser parada onde estiver.</li>
       <li>O nome invertido deve ser impresso <br>
         <i>Mesmo que não esteja completo por ter encontrado um caractere proibido.</i>
-      </ul>
-        
-      <button class="excButtons">Exercício 7</button>
-      <hr>
+      </li>
+    </ul>
+
+    <button class="excButtons">Exercício 7</button>
+    <hr>
+  </div>
+
+  <div class="container">
+    <h3>Exercício 8</h3>
+    <ul>
+      <li>Acelerar a nave em 5 km/h.</li>
+      <li>Desacelerar em 5 km/h. <br>
+        <i>Por mais que desacelere a nave não pode ter uma velocidade menor que 0 km/h.</i>
+      </li>
+      <li>Imprimir dados de bordo. <br>
+        <i>Deve ser impresso o nome da nave com sua velocidade atual.</i>
+      </li>
+      <li>Sair do programa.</li>
+    </ul>
+
+    <button class="excButtons">Exercício 8</button>
+    <hr>
+  </div>
+
+  <div class="container">
+    <h3>Exercício 9</h3>
+    <p>Neste Exercício vamos simular o computador de bordo de uma espaçonave no momento em que ela inicia a parada até
+      abrir as comportas para os pilotos saírem</p>
+    <ul>
+      <li>Considerem que a nave está a 150 km/h.</li>
+      <li>Crie uma função para desacelerar 20 km/h a cada segundo. </li>
+      <i>Considere, no código, que cada iteração de um laço de repetição é 1 segundo.</i><br>
+      <i>Apresentar via console.log a desaceleração.</i>
+    </ul>
+
+    <button class="excButtons">Exercício 9</button>
+    <hr>
   </div>
 
   <div class="container">
     <h3>Exercícios sendo atualizados...</h3><br><br>
   </div>
-  
+
   <div class="fixed-footer">
     <div class="container">
       <div class="contacts">
         <div class="contact">Contato: </div>
-        <a href ="mailto: andrebeckerdev@gmail.com">andrebeckerdev@gmail.com</a>
+        <a href="mailto: andrebeckerdev@gmail.com">andrebeckerdev@gmail.com</a>
         <div class="contact">
-          <a href="https://www.linkedin.com/in/andrebeckerdev/" target="_blank"><img src="./images/linkedin.png" alt="Linkedin"></a>
+          <a href="https://www.linkedin.com/in/andrebeckerdev/" target="_blank"><img src="./images/linkedin.png"
+              alt="Linkedin"></a>
           <a href="https://github.com/beckerandre" target="_blank"><img src="./images/github.png" alt="Github"></a>
         </div>
       </div>
     </div>
   </div>
 </body>
+
 </html>
