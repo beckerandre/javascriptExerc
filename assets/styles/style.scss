@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+@mixin body-default {
+    background-color: #f9f9f9;
+    font-family: "Open Sans", sans-serif;
+    margin: auto;
+    
+    .excButtons{
+        margin-top: 1em;
+        padding: 0.300em;
+        &:hover{
+            transition: 0.8s;
+            background-color: #a0a0a0;
+            cursor: pointer;
+        }
+        border-radius: 5px;
+    }
+    hr{
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    .boxCitation{
+        background-color: #ffe4c4;
+        padding: 0.700em;
+        margin: 0.500em;
+        display: inline-block;
+    }
+
+    .container{
+        padding: 1em;
+        width: 80%;
+        margin: 0 auto;
+        h3{
+            padding-bottom: 0.500em;;
+        }
+        li{
+            list-style-type: none;
+            text-indent: 1em;
+            &:before{
+                content: "-";
+                margin-right: 0.300em;
+            }
+        }
+    }
+}
+
+@mixin header-default{
+    background-color: #333;
+    padding: 10px 10px;
+    display: flex;
+    
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    img {
+        width: 20px;
+    }
+    
+    nav {
+        flex: 1;
+    }
+    
+    .language {
+        float: right;
+    }
+}
+
+@mixin footer-default{
+    background-color: #333;
+        padding: 10px 10px;
+        bottom: 0;
+        color: #fff;
+        
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        img{
+            width: 20px;
+        }
+        
+        .contacts{
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact{
+            flex: 1;
+            order: 1;
+            margin-bottom: 0.100em;
+            
+        }
+        .contact-email{
+            flex:1;
+            order: 2;
+            margin-bottom: 0.300em;
+        }
+        
+        .contact-media{
+            flex: 1;
+            order: 3;
+        }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        @include body-default;
+        font-size: 16px;
+    }
+    
+    .fixed-header {
+        @include header-default;
+    }
+    
+    .fixed-footer{
+        @include footer-default;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        @include body-default;
+        font-size: 20px;
+    }
+
+    .fixed-header {
+        @include header-default;
+    }
+    
+    .fixed-footer{
+        @include footer-default;
+        
+    }
+    
+    .excButtons{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px){
+    body {
+        @include body-default;
+        font-size: 18px;
+    }
+
+    .fixed-header {
+        @include header-default;
+    }
+    
+    .fixed-footer{
+        @include footer-default;
+        
+    }
+
+    .excButtons{
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (min-width: 1441px){
+    body {
+        @include body-default;
+        font-size: 18px;
+    }
+    main{
+        margin: auto 20%;
+    }
+
+    .fixed-header {
+        @include header-default;
+    }
+    
+    .fixed-footer{
+        @include footer-default;
+        
+    }
+    .container{
+        width: 50%;
+        align-content: center;
+    }
+
+    .excButtons{
+        font-size: 16px;
+    }
+    
+}
