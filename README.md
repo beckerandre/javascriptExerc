@@ -9,8 +9,8 @@ These exercises are mainly to show the logic used and also the knowledge already
 Just clone and open in your web-server.
 
 
-## Hosted
+<!-- ## Hosted
 
 You can access this project in:
 
-[JavaScript Exercises](https://beckerdigital.com.br/javascriptExerc/)
+[JavaScript Exercises](https://beckerdigital.com.br/javascriptExerc/) -->
